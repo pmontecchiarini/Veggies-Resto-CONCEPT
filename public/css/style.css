@@ -1,0 +1,14 @@
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.nav-link.active {
+    border-bottom: 3px solid #31BF3F;
+}
+
+header .nav a {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1rem;
+    color:#31BF3F;
+    font-weight: bold;
+}

@@ -1,0 +1,12 @@
+header 
+    .container
+        .row.align-items-center.py-4
+            .col-6.col-md-4
+                a(href="/")
+                    img(src="/img/veggie_logo.svg", alt="Logo Veggie's Resto", class="img-fluid" )
+            .col-6.col-md-8
+                nav.nav.justify-content-end
+                    a.nav-link(href="/", class=(route === '/' ? 'active' : '')) Home
+                    a.nav-link(href="/menu", class=(route === '/menu' ? 'active' : '')) Online Menu
+                    a.nav-link(href="/reviews", class=(route === '/reviews' ? 'active' : '')) Reviews
+                    a.nav-link(href="/contactus", class=(route === '/contactus' ? 'active' : '')) Contact us
