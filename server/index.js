@@ -4,10 +4,10 @@ const routes = require('./routes');
 const path = require('path');
 const bodyParser = require('body-parser');
 
-
-// db.authenticate()
-//     .then(() => console.log('DB connected'))
-//     .catch( error => console.log('error')); 
+const db = require('./config/database');
+ db.authenticate()
+     .then(() => console.log('DB connected'))
+     .catch( error => console.log('error')); 
 
 //Configure Express
 const app = express();

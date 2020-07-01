@@ -1,3 +1,18 @@
 extends ../layout/index
 block content
-    h1= page
+    .container
+        h1= page
+        p Have any questions or comments? We'd love to hear from you. 
+        .row.justify-content-center
+            .col-md-8 
+                form
+                    .form-group
+                        label(for="name") Name
+                        input(type="text", id="name", class="form-control", placeholder="Your name", name="name", value=name )
+                    .form-group    
+                        label(for="mail") E-mail
+                        input(id="email", class="form-control", type="email", placeholder="Your email", name="email", value=correo)
+                    .form-group    
+                        label(for="message") Message
+                        textarea(id="message", name="message", class="form-control", rows="3", placeholder="Your message")=mensaje
+                    input.btn.btn-success.btn-block(type="submit", value="Send")
