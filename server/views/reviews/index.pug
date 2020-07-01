@@ -1,4 +1,40 @@
 extends ../layout/index
 block content
     .container
-        h1= page
+        h1 #{page}
+
+
+        .row
+            .col-md-12
+                blockquote.text-center Read our customer reviews and learn more about us
+                .row.reviews
+                each review in reviews 
+                    .col-md-6.col-lg-4.mb-4
+                        .card
+                            .card-body
+                                blockquote.blockquote
+                                p.mb-0
+                                    | #{review.review}
+                                footer.blockquote-footer
+                                    | #{review.name}
+
+            .col-md-12
+                h2.text-center Please submit your review
+                if(errors)
+                    each error in errors
+                        .alert.alert-danger.text-center=error.message
+
+                .row.justify-content-center
+                    .col-md-6
+                        form(action='/reviews', method="POST")
+                            .form-group
+                                label(for="name") Name
+                                input(type="text", id="name", class="form-control", placeholder="Your name", name="name", value=name )
+                            .form-group    
+                                label(for="mail") E-mail
+                                input(id="email", class="form-control", type="email", placeholder="Your email", name="email", value=email)
+                            .form-group    
+                                label(for="review") Review
+                                textarea(id="review", name="review", class="form-control", rows="3", placeholder="Your review")=review
+                            input.btn.btn-success.btn-block(type="submit", value="Submit review")
+

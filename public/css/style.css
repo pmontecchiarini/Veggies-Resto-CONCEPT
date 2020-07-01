@@ -12,3 +12,27 @@ header .nav a {
     color:#31BF3F;
     font-weight: bold;
 }
+
+/* -------REVIEWS--------- */
+
+.reviews p{
+    font-size: .8rem;
+    font-weight: normal;
+}
+.reviews p::before {
+    background-image: url(../img/quote.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 40px;
+    content: '';
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin-bottom: 1rem;
+}
+.reviews-footer {
+    text-align: right;
+    color: #DC135F;
+    font-weight: bold;
+    margin-top: 1rem;
+}

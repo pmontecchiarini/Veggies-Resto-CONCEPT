@@ -13,9 +13,9 @@ module.exports = function (){
     router.get('/', homeController.Homepage);
     router.get('/contactus', contactusController.infoAboutUs);
     router.get('/menu', menuController.OrderFood );    
-    router.get('/reviews', reviewController.ReviewsPage );
-    //Cuando se llena el formulario
-    //router.post('/testimonials', testimonialController.agregarTestimonial);
+    router.get('/reviews', reviewController.showReviews );
+    //When a new review is submitted
+    router.post('/reviews', reviewController.addReview);
 
     return router;
 }

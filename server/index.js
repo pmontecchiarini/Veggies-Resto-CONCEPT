@@ -30,6 +30,7 @@ app.use((req, res, next) => {
 }
 )
 
+//execute body-parser
 app.use(bodyParser.urlencoded({extended: true}));
 
 //Load routes
