@@ -1,22 +1,23 @@
 extends ../layout/index
 block content
     .container
-        h1 #{page}
+        h1.text-center #{page}
 
 
         .row
+
             .col-md-12
                 blockquote.text-center Read our customer reviews and learn more about us
                 .row.reviews
-                each review in reviews 
-                    .col-md-6.col-lg-4.mb-4
-                        .card
-                            .card-body
-                                blockquote.blockquote
-                                p.mb-0
-                                    | #{review.review}
-                                footer.blockquote-footer
-                                    | #{review.name}
+                    each review in reviews 
+                        .col-md-6.col-lg-4.mb-4
+                            .card
+                                .card-body
+                                    blockquote.blockquote
+                                        p.mb-0
+                                            | #{review.review}
+                                    footer.reviews-footer
+                                        | #{review.name}
 
             .col-md-12
                 h2.text-center Please submit your review

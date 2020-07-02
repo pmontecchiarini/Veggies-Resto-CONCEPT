@@ -16,7 +16,7 @@ header .nav a {
 /* -------REVIEWS--------- */
 
 .reviews p{
-    font-size: .8rem;
+    font-size: 1rem;
     font-weight: normal;
 }
 .reviews p::before {
@@ -32,7 +32,7 @@ header .nav a {
 }
 .reviews-footer {
     text-align: right;
-    color: #DC135F;
+    color: #9999CC;
     font-weight: bold;
     margin-top: 1rem;
 }
