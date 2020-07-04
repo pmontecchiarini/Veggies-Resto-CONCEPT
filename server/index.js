@@ -3,13 +3,13 @@ const express = require("express");
 const routes = require("./routes");
 const path = require("path");
 const bodyParser = require("body-parser");
-const nodemailer = require("nodemailer");
+// const nodemailer = require("nodemailer");
 
 const db = require("./config/database");
 const { getMaxListeners } = require("process");
 db.authenticate()
-  .then(() => console.log("DB connected"))
-  .catch((error) => console.log("error"));
+  .then(() => console.log("Database connection was succesfull."))
+  .catch((error) => console.log("Error connectiong to de database."));
 
 //Configure Express
 const app = express();

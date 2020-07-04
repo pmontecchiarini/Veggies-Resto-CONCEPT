@@ -36,3 +36,22 @@ header .nav a {
     font-weight: bold;
     margin-top: 1rem;
 }
+
+/* -------ONLINE MENU--------- */
+
+.menu p {
+    font-size: .9rem;
+}
+i {
+    color: #9999CC;
+    font-size: 2rem;
+}
+
+.dishes{
+    object-fit: cover;
+    height: 8rem;
+}
+
+.card h2{
+    margin: 0px 0px
+}

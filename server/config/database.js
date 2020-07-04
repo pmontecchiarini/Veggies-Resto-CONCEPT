@@ -1,4 +1,3 @@
-//Consiguracion para la base de datos
 const Sequelize = require('sequelize');
 
 module.exports = new Sequelize('veggies_takeout_concept', 'root', '', {
