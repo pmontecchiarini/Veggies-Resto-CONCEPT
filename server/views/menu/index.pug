@@ -2,12 +2,4 @@ extends ../layout/index
 block content 
     .container
         h1.text-center #{page}
-        .row.menu
-            each menu in menus
-                .col-md-6.col-lg-4.mb-4
-                    .card
-                        img(src=`img/dish_${menu.image}.jpg`, class="img-fluid m-3 dishes")
-                        .card-body
-                            h2=menu.name
-                            p= menu.description.substr(0, 100)
-                            a(href=`menu/${menu.id}`, class="btn btn-success btn-block") More info
+        include ../layout/partials/menus

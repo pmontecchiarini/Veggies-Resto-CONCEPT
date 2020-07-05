@@ -8,3 +8,10 @@ exports.onlineMenu = async (req, res) => {
         menus
     })
 }
+
+exports.menuDish = async (req, res) => {
+    const menu = await Menu.findByPk(req.params.id)
+    res.render( 'dish', {
+        menu
+    })
+}

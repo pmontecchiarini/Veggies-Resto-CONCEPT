@@ -1,0 +1,14 @@
+extends ../layout/index
+block content
+    .container
+        h1= page
+        .row    
+            .col-md-5
+                img(src=`/img/dish_${menu.image}.jpg`, class="img-fluid")
+            .col-md-7
+                h2 #{menu.name}
+                p= menu.description
+                p.price
+                    i.fas.fa-dollar-sign.mr-1
+                    | #{menu.price}
+                a(href=`/menu`, class="btn btn-success") Back to menu
