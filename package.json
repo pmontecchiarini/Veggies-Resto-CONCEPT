@@ -4,7 +4,8 @@
   "description": "Vegan food take-out and delivery",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server"
+    "dev": "nodemon server",
+    "start": "node server"
   },
   "repository": {
     "type": "git",
@@ -30,5 +31,8 @@
     "nodemon": "^2.0.4",
     "pug": "^3.0.0",
     "sequelize": "^5.21.13"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
   }
 }

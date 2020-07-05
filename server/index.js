@@ -5,6 +5,8 @@ const path = require("path");
 const bodyParser = require("body-parser");
 // const nodemailer = require("nodemailer");
 
+require('dotenv').config({ path: 'variables.env'});
+
 const db = require("./config/database");
 const { getMaxListeners } = require("process");
 db.authenticate()
@@ -80,4 +82,8 @@ app.use("/", routes());
 //   main().catch(console.error);
 // });
 
-app.listen(3000, () => console.log("Server starting..."));
+/** PORT & HOST */
+const host = process.env.HOST || '0.0.0.0';
+const port = process.env.PORT || '3000';
+
+app.listen(port, host, () => console.log("Server starting..."));
