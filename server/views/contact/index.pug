@@ -3,15 +3,21 @@ block content
     .container
         h1= page
         p Have any questions or comments? We'd love to hear from you. 
+        if(errors)
+            each error in errors
+                .alert.alert-danger.text-center=error.message
+        else
+            .alert.alert-success.text-center='Your message was sent'
+
         .row.justify-content-center
             .col-md-8 
-                //- #{msg}
-                form(action='/send', method="POST")
+               
+                form(action='/contact', method="POST")
                     .form-group
                         label(for="name") Name
                         input(type="text", id="name", class="form-control", placeholder="Your name", name="name", value=name )
                     .form-group    
-                        label(for="mail") E-mail
+                        label(for="email") E-mail
                         input(id="email", class="form-control", type="email", placeholder="Your email", name="email", value=correo)
                     .form-group    
                         label(for="message") Message
