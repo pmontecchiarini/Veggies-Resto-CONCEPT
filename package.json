@@ -39,5 +39,9 @@
   },
   "devDependencies": {
     "dotenv": "^8.2.0"
+  },
+  "engines": {
+    "npm": "6.9.0",
+    "node": "10.16.3"
   }
 }
