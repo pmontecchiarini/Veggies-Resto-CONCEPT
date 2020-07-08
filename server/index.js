@@ -4,7 +4,13 @@ const routes = require("./routes");
 const path = require("path");
 const bodyParser = require("body-parser");
 
-if (process.env.NODE_ENV !== 'production') {require('dotenv').config({ path: 'variables.env'}) }
+//Setting production enviroment
+const configs = require('./config');
+
+require('dotenv').config({ path: 'variables.env'}) 
+
+
+//if (process.env.NODE_ENV !== 'production') {require('dotenv').config({ path: 'variables.env'}) }
 
 const db = require("./config/database");
 const { getMaxListeners } = require("process");
@@ -23,6 +29,11 @@ app.set("views", path.join(__dirname, "./views"));
 
 //Load static folder
 app.use(express.static("public"));
+
+//Validate enviroment
+const config = configs[app.get('env')];
+
+app.locals.title = config.sitename;
 
 // Show current year and current route
 app.use((req, res, next) => {

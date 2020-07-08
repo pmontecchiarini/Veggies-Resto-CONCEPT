@@ -1,10 +1,11 @@
+
 module.exports= {
 
     development: {
-        nombresitio: 'Veggies Takeout [Development]'
+        sitename: '[Development] Veggies Takeout'
     },
     production: {
-        nombresitio: 'Veggies Takeout'
+        sitename: 'Veggies Takeout'
     }
     
 }
