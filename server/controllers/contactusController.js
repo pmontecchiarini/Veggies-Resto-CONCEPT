@@ -1,5 +1,5 @@
 const Contact = require('../models/Contact');
-
+const { useInflection } = require('sequelize');
 
 exports.infoAboutUs = (req, res) => {
     res.render('contact', {
@@ -13,7 +13,7 @@ exports.contactForm = async (req, res) => {
      //Validate complete fields
     let {name, email, message} = req.body;
 
-     let errors = [];
+    let errors = [];
      if (!name){
          errors.push({'message': 'Your name field cannot be empty'})
     }
@@ -42,11 +42,16 @@ exports.contactForm = async (req, res) => {
              message
          })
          .then( 
-             contact => res.redirect('/contact',
-             ))
+             contact => res.redirect('/contact-success' ))
          .catch(errors => console.log(errors));
      }
 
 
  }
+
+ exports.sentContact = (req, res) => {
+    res.render('contact-success', {
+        page: 'Contact us'
+    });
+} 
 

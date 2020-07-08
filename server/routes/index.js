@@ -15,6 +15,7 @@ module.exports = function (){
     router.get('/menu', menuController.onlineMenu );
     router.get('/menu/:id', menuController.menuDish);    
     router.get('/reviews', reviewController.showReviews );
+    router.get('/contact-success', contactusController.sentContact );
     //When a new review is submitted
     router.post('/reviews', reviewController.addReview);
     //Submit contact form
