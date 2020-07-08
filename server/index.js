@@ -4,8 +4,7 @@ const routes = require("./routes");
 const path = require("path");
 const bodyParser = require("body-parser");
 
-
-require('dotenv').config({ path: 'variables.env'});
+if (process.env.NODE_ENV !== 'production') {require('dotenv').config({ path: 'variables.env'}) }
 
 const db = require("./config/database");
 const { getMaxListeners } = require("process");
