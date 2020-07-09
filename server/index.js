@@ -7,8 +7,9 @@ const bodyParser = require("body-parser");
 //Setting production enviroment
 const configs = require('./config');
 
-require('dotenv').config({ path: 'variables.env'}) 
+if (process.env.NODE_ENV !== 'production') { require('dotenv').config({ path: 'variables.env'})  }
 
+//require('dotenv').config({ path: 'variables.env'}) 
 
 //if (process.env.NODE_ENV !== 'production') {require('dotenv').config({ path: 'variables.env'}) }
 
